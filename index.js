@@ -23,10 +23,11 @@ const heading1 = React.createElement(
   'Namaste React Dev 2'
 );
 
-const div = React.createElement('div', { className: 'div1' }, [
-  heading,
-  heading1,
-]);
+const div = React.createElement(
+  'div',
+  { className: 'div1', hello: 'World' },
+  [heading, heading1]
+);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(div);
