@@ -1,3 +1,5 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 const heading = React.createElement(
   'h1',
   {
@@ -8,7 +10,7 @@ const heading = React.createElement(
     },
     className: 'hy1',
   },
-  'Namaste React Dev 1'
+  'Namaste React Dev From Parcel'
 );
 const heading1 = React.createElement(
   'h1',
@@ -28,6 +30,22 @@ const div = React.createElement(
   { className: 'div1', hello: 'World' },
   [heading, heading1]
 );
+
+const HeadJSX = <h1>Hello react</h1>;
+
+const data = {name:"Arup"}
+
+const HeadJSXFunc = () => {
+  return (
+    <>
+      <div>
+        <h1>Namaste JavaScript</h1>
+        {HeadJSX }  {data.name}
+      </div>
+    </>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(div);
+root.render(<HeadJSXFunc />);
